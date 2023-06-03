@@ -5,7 +5,7 @@ export default function Movie() {
 
     // Fetch Popular Data from OMDB API
     const FetchMovieData = async () => {
-      let URL=`http://www.omdbapi.com/?s=love&apikey=928b0069&`;
+      let URL=`https://www.omdbapi.com/?s=love&apikey=928b0069&`;
       let response_data = await fetch(URL);
       let result = await response_data.json();
       setItems(result.Search)

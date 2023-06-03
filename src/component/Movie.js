@@ -14,7 +14,7 @@ export default function Movie() {
       setError(null);
     
       try {
-        const response = await fetch(`http://www.omdbapi.com/?s=${search_movie}&apikey=a53eed4a&page=${page}`);
+        const response = await fetch(`https://www.omdbapi.com/?s=${search_movie}&apikey=a53eed4a&page=${page}`);
         const data = (await response.json()).Search;
         
         setItems(prevItems => [...prevItems, ...data]); // Append New data to Items
